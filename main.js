@@ -30,13 +30,13 @@ app.on('window-all-closed', () => {
 })
 
 ipcMain.on('capture-screenshot', async (event) => {
-  const screenShotInfo = await captureScreenshot();
+  const screenShotInfo = await captureScreen();
   const dataURL = screenShotInfo.toDataURL();
   event.sender.send('screenshot-captured', dataURL);
 });
 
 
-async function captureScreenshot() {
+async function captureScreen() {
   // Get the primary display
   const primaryDisplay = screen.getPrimaryDisplay();
 
