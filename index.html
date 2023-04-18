@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; img-src 'self' data:"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; img-src 'self' data:"
+    />
+    <title>Electron Screenshot Example</title>
+  </head>
+  <body>
+    <img id="screenshot-image" width="100%" /><br />
+    <button id="screenshot-button">Capture</button>
+    <script src="./renderer.js"></script>
+  </body>
+</html>
